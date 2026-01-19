@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import YahooFinance from "yahoo-finance2";
 
+// @ts-ignore
 const yahooFinance = new YahooFinance({
     fetchOptions: {
         headers: {
