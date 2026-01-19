@@ -1,14 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
 import YahooFinance from "yahoo-finance2";
 
-// @ts-ignore
 const yahooFinance = new YahooFinance({
     fetchOptions: {
         headers: {
             "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
         }
     }
-});
+} as any);
 
 export async function GET(request: NextRequest) {
     const searchParams = request.nextUrl.searchParams;
